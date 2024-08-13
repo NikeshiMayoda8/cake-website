@@ -15,7 +15,7 @@ export const Discount: React.FC = () => {
         </p>
       </div>
       <div className="discount-image">
-        <img src="/images/discount.jpg" alt="Cake" />
+        {/* <img src="/images/discount.jpg" alt="Cake" /> */}
       </div>
     </div>
   );

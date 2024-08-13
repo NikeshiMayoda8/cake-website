@@ -3,20 +3,30 @@ import React from "react";
 export const Footer: React.FC = () => {
   return (
     <footer className="footer">
-      <p>&copy; 2024 Slice & Dice. All rights reserved.</p>
       <nav className="nav-footer">
-        {/* <ul>
+        <ul>
           <li>
-            <a href="#">Privacy Policy</a>
+            <a href="/">Home</a>
           </li>
           <li>
-            <a href="#">Terms of Service</a>
+            <a href="/about">About</a>
           </li>
           <li>
-            <a href="#">Contact</a>
+            <a href="/shop">Shop</a>
           </li>
-        </ul> */}
+          <li>
+            <a href="/contact">Contact</a>
+          </li>
+          <li>
+            <a href="#">Search</a>
+          </li>
+          <li>
+            <a href="/cart">Cart</a>
+          </li>
+        </ul>
       </nav>
+      <div className="footer-divider"></div>
+      <p>&copy; 2024 Slice & Dice. All rights reserved.</p>
     </footer>
   );
 };

@@ -1,12 +1,13 @@
 import React from "react";
-import { HeroSectionAbout } from "./_component";
+import { About, HeroSectionAbout } from "./_component";
 
-const About = () => {
+const page = () => {
   return (
     <div>
       <HeroSectionAbout />
+      <About />
     </div>
   );
 };
 
-export default About;
+export default page;

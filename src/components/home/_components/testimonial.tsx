@@ -40,18 +40,30 @@ export const Testimonial: React.FC = () => {
   const { text, author, date } = testimonials[currentIndex];
 
   return (
-    <div className="testimonial-slider">
-      <h3 className="testimonial-title">Hear From Our Happy Customers</h3>
-      <div className="testimonial-slide">
-        <p className="testimonial-text">{text}</p>
-        <div className="testimonial-footer">
-          <span className="testimonial-author">{author}</span>
-          <br></br>
-          <span className="testimonial-date">{date}</span>
+    <div className="testimonial-container">
+      <div className="testimonial-background">
+        <img
+          src="/images/about-cake.jpg"
+          alt="About Cake"
+          className="testimonial-image"
+        />
+      </div>
+      <div className="testimonial-slider">
+        <h3 className="testimonial-title">Hear From Our Happy Customers</h3>
+        <div className="testimonial-slide">
+          <p className="testimonial-text">{text}</p>
+          <div className="testimonial-footer">
+            <span className="testimonial-author">{author}</span>
+            <br />
+            <span className="testimonial-date">{date}</span>
+          </div>
+          <button
+            className="nav-button"
+            onClick={() => handleNavigation("next")}
+          >
+            Next
+          </button>
         </div>
-        <button className="nav-button" onClick={() => handleNavigation("next")}>
-          Next
-        </button>
       </div>
     </div>
   );

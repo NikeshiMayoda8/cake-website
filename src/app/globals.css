@@ -135,6 +135,7 @@ nav {
 
 .nav-center li {
   margin: 0 15px; 
+  position: relative; /* For positioning the search form */
 }
 
 .nav-center a {
@@ -158,53 +159,115 @@ nav {
   margin-right: auto; 
 }
 
-/* footer.css */
-.footer {
-  background-color: #f1f1f1;
-  padding: 20px;
-  text-align: center;
-  border-top: 1px solid #ddd;
+.search-form {
+  display: flex;
+  align-items: center;
 }
 
-.footer p {
-  margin: 0;
+.search-input {
+  padding: 5px 10px;
   font-size: 14px;
-  color:#191212
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+}
+
+.search-button {
+  background-color: #e01052;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-left: 5px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #78132c;
+}
+
+.cart-icon {
+  font-size: 20px; /* Adjust size as needed */
+  color: #333; /* Default color for the icon */
+  display: flex;
+  align-items: center; /* Center-align the icon */
+}
+
+.cart-icon:hover {
+  color: #e01052; /* Change color on hover */
+}
+
+
+/* footer.css */
+.footer {
+  margin-top: 40px;
+  background-color: #141313;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #0a0a0a;
+}
+
+.nav-footer{
+  background-color: #141313;
 }
 
 .footer nav ul {
   list-style: none;
   padding: 0;
+  margin: 0; /* Remove margin for proper alignment */
 }
 
 .footer nav ul li {
   display: inline;
-  margin: 0 10px;
+  margin: 0 15px; /* Spacing between links */
 }
 
 .footer nav ul li a {
   text-decoration: none;
-  color: #007bff;
+  color: #fff; /* Link color */
+  font-size: 14px; /* Adjust font size */
 }
 
+
 .footer nav ul li a:hover {
-  text-decoration: underline;
+  color: #e01052; 
 }
+
+.footer-divider {
+  margin: 20px 0; /* Space around the divider */
+}
+
+.footer p {
+  margin: 0; /* No margin to align with the footer */
+  font-size: 14px;
+  color: #eee7e7;
+}
+
 
 /* heroSection.css */
 .hero-section {
-  background-color: #FDCDD8;
-  /* background-image: url('');  */
   background-size: cover;
   background-position: center;
-  padding: 100px 0; 
   text-align: center;
+  position: relative; /* Added to position the content on the image */
+}
+
+.hero-image {
+  position: relative;
 }
 
 .hero-content {
-  color: #921A40; 
+  color: #eee9eb;
   max-width: 600px;
   margin: 0 auto;
+  position: absolute; /* Added for positioning over the image */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2; /* Ensure the content is above the image */
 }
 
 .hero-content h1 {
@@ -215,8 +278,9 @@ nav {
 .hero-content p {
   font-size: 24px;
 }
+
 .hero-button {
-  background-color: #e01052; 
+  background-color: #e01052;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -228,23 +292,41 @@ nav {
 }
 
 .hero-button:hover {
-  background-color: #78132c; 
+  background-color: #78132c;
+}
+
+.hero-image {
+  position: relative;
+  height: 500px; /* Set a fixed height for the hero image container */
+  overflow: hidden; /* Hide any overflow */
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  height: auto;
+  display: block;
+  z-index: 1; /* Image stays behind the content */
 }
 
 /* Product.css */
+
+.products-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.product-title {
+  text-align: center; 
+  margin-bottom: 20px;
+}
 
 .products {
   display: flex;
   flex-wrap: wrap; 
   justify-content: center; 
   gap: 20px; 
-  background-color: white; 
-  padding: 20px;
-  border-radius: 10px; 
-}
-.product-title {
-  text-align: center; 
-  margin-bottom: 20px;
 }
 
 .product-card {
@@ -269,7 +351,7 @@ nav {
 h3 {
   margin: 15px 0;
   font-size: 1.5rem;
-  color: black;
+  color: #e01052;
 }
 
 h4 {
@@ -293,92 +375,107 @@ button:hover {
   background-color: #78132c;
 }
 
+
 /* Discount.css */
 
 .discount-section {
   display: flex;
-  justify-content: space-between; 
+  justify-content: center; /* Center align the content horizontally */
   padding: 20px;
   background-color: #e01052;
+  text-align: center; /* Center align text */
 }
 
 .discount-text {
   flex: 1;
-  padding-right: 20px; 
+  padding: 20px; /* Adjust padding as needed */
 }
 
 .discount-text h2 {
   margin-top: 20px;
-  color: #fff; 
+  color: #fff;
   font-size: 2.5rem;
-  text-align: center; 
 }
 
 .discount-text h3 {
-  color: #d3e816; 
+  color: #d3e816;
   font-size: 1.5rem;
-  text-align: center; 
 }
 
 .discount-text p {
-  color: #fff; 
-}
-
-.discount-image {
-  flex: 1; 
-}
-
-.discount-image img {
-  width: 100%; 
-  max-width: 500px; 
-  height: auto; 
-  border-radius: 10px; 
+  color: #fff;
+  margin-top: 10px; /* Add margin to space the paragraph from the heading */
 }
 
 /*Testimonial.css*/
 
-.testimonial-slider {
-  display: flex;
-  justify-content: center;
-  width: 100%; 
-  margin: 0 auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.testimonial-slide {
-  text-align: center;
-  padding: 20px;
-  border: 1px solid #ddd;
-  background-color: #FDCDD8;
-  font-style: italic;
-  width: 90%; 
-  max-width: 800px; 
+.testimonial-container {
+  margin-top: 40px;
   position: relative;
+  width: 100%;
+  overflow: hidden; /* Prevents content overflow */
 }
 
-.testimonial-text {
-  margin-bottom: 20px; 
+.testimonial-background {
+  position: relative;
+  width: 100%;
+  height: 400px; /* Adjust as needed for the image size */
 }
 
-.testimonial-footer {
-  margin-bottom: 20px; 
+.testimonial-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container */
+}
+
+.testimonial-slider {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column; /* Stack title and testimonial slide vertically */
+  align-items: center; /* Center-align content horizontally */
+  width: 90%;
+  max-width: 800px;
+  color: #fff; /* White text color for contrast */
+  text-align: center;
 }
 
 .testimonial-title {
-  text-align: center;
-  margin-bottom: 20px; 
+  margin-bottom: 20px; /* Space between title and slide */
+  font-size: 2rem; /* Adjust size as needed */
+  color: #fff;
+  font-weight: bold;
+}
+
+.testimonial-slide {
+  padding: 20px;
+  border: 1px solid #ddd;
+  background-color: rgba(253, 205, 216, 0.8); /* Slightly transparent background for contrast */
+  font-style: italic;
+  width: 100%;
+}
+
+.testimonial-text {
+  margin-bottom: 20px;
+  color: #191212;
+}
+
+.testimonial-footer {
+  margin-bottom: 20px;
 }
 
 .testimonial-author {
   display: block;
   font-weight: bold;
   font-style: normal;
+  color: #e01052;
 }
 
 .testimonial-date {
   display: block;
-  color: #555; 
+  color: #e01052;
   font-style: normal;
 }
 
@@ -386,10 +483,13 @@ button:hover {
   background-color: #e01052;
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 8px 16px; /* Reduced padding for a smaller button */
+  font-size: 0.9rem; /* Slightly smaller font size */
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 4px; /* Slightly smaller border-radius for a smaller button */
+  transition: background-color 0.3s;
 }
+
 
 .nav-button:hover {
   background-color: #78132c;
@@ -415,7 +515,7 @@ button:hover {
   top: 50%; /* Centers the text vertically */
   left: 50%; /* Centers the text horizontally */
   transform: translate(-50%, -50%);
-  color: #0f0c0d; /* Adjust text color for visibility */
+  color: #fcf1f5; /* Adjust text color for visibility */
   text-align: center;
   padding: 20px;
   border-radius: 10px;
@@ -424,4 +524,38 @@ button:hover {
 .hero-text-for-about h1 {
   margin: 0;
   font-size: 3em; /* Adjust font size as needed */
+}
+
+/*about-us-descritption*/
+
+.about-description {
+  margin-top: 40px;
+  display: flex;
+  margin-right: 150px;
+  padding: 20px;
+}
+
+.about-us-image {
+  flex: 1;
+  margin-left: 100px;
+}
+
+.about-us-image img {
+  width: 300px;
+  height: 300px;
+}
+
+.about-us-text {
+  flex: 2;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.about-us-text h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  color: #e01052; /* Custom color for Slice & Dice */
 }
