@@ -559,3 +559,33 @@ button:hover {
 .highlight {
   color: #e01052; /* Custom color for Slice & Dice */
 }
+
+/*contact-us-descritption*/
+.contact-hero-section {
+  position: relative;
+  width: 100%;
+  max-height: 500px; /* Adjust as needed */
+  overflow: hidden;
+}
+
+.hero-image-for-contact {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-text-for-contact {
+  position: absolute;
+  top: 50%; /* Centers the text vertically */
+  left: 50%; /* Centers the text horizontally */
+  transform: translate(-50%, -50%);
+  color: #fcf1f5; /* Adjust text color for visibility */
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.hero-text-for-contact h1 {
+  font-size: 3rem; /* Increase font size here */
+  margin-bottom: 20px;
+}

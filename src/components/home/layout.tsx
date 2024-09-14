@@ -12,10 +12,9 @@ const HomeLayout: React.FC<Props> = ({ children }) => {
       <Home />
       <header>
         <h1>My App</h1>
-        {/* Navigation, etc. */}
       </header>
       <main>{children}</main>
-      <footer>{/* Footer content */}</footer>
+      <footer></footer>
     </div>
   );
 };

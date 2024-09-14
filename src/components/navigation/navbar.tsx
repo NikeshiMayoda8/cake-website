@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { ShoppingCartOutlined } from "@ant-design/icons"; // Import the cart icon
+import { ShoppingCartOutlined } from "@ant-design/icons"; 
 
 export const Navbar: React.FC = () => {
   return (
@@ -37,7 +37,7 @@ export const Navbar: React.FC = () => {
         </li>
         <li>
           <Link href="/cart" className="cart-icon">
-            <ShoppingCartOutlined /> {/* Use Ant Design cart icon */}
+            <ShoppingCartOutlined /> 
           </Link>
         </li>
       </ul>
