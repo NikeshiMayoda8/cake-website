@@ -63,7 +63,7 @@ export default function Contact() {
             required
           />
         </div>
-        <button type="submit">Send</button>
+        <button className="contact-button" type="submit">Send</button>
       </form>
     </div>
   );
